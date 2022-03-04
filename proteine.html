@@ -13,7 +13,6 @@
  padding: 0;
  list-style-type: none;
 }
-
 ul li {
  box-sizing: border-box;
  width: 15em;
@@ -22,33 +21,29 @@ ul li {
  border-radius: 0.5em;
  margin: 0.5em;
  box-shadow: 0 0 1em rgba(0,0,0,0.2);
- color: white;
+ color: rgb(2, 3, 0);
  font-family: sans-serif;
  text-transform: capitalize;
  line-height: 3em;
  transition: 0.3s;
  cursor: pointer;
 }
-
 ul li:nth-child(odd) {
  background: linear-gradient(to right,rgb(99, 62, 8), rgb(59, 42, 4));
  text-align: left;
  padding-left: 5%;
  transform: perspective(500px) rotateY(30deg);
 }
-
 ul li:nth-child(even) {
- background: linear-gradient(to left, orange, tomato);
+ background: linear-gradient(to left, rgb(58, 39, 4), rgb(32, 24, 13));
  text-align: right;
  padding-right: 10%;
  transform: perspective(400px) rotateY(-45deg);
 }
-
 ul li:nth-child(odd):hover {
  transform: perspective(200px) rotateY(45deg);
  padding-left: 5%;
 }
-
 ul li:nth-child(even):hover {
  transform: perspective(300px) rotateY(-45deg);
  padding-right: 5%;
@@ -58,15 +53,12 @@ ul li:nth-child(even):hover {
  height: 400px;
  
 }
-
-
 </style>
 <div id="miodiv">
 <p>Convertitore:</p>
 <ul>
-<li><button class="button" onclick="myFunction()" class="ul"> converti in kcal</button></li> 
+<li><button class="button" onclick="myFunction()" class="ul"> CONVERTI in Kcal</button></li> 
 </ul>
-
 
 <p>grassi:</p>
 <p id="base"></p>
