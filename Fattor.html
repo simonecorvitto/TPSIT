@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fattorizzatore (risoluzione di un enigma)</title>
+    <strong><h1>Fattorizzatore</h1></strong>
+    <style>
+        h1{
+            font-family:Verdana;
+            color: rgb(110, 97, 79);;
+            text-decoration-line: underline;
+            text-decoration-color: rgb(172, 131, 96) ;
+            text-shadow:1px 1px 2px black,0px 0px 25px rgb(65, 50, 20), 0px 0px 5px rgb(230, 200, 71);
+           
+        }       
+         button{
+            font-family:Verdana;
+            font-size: 15px;
+			color: black;
+            background-color:rgb(188, 158, 119);
+        }
+        *{
+            font-family: Verdana;
+            
+        }
+
+     </style>
+</head>
+<body style="background-color: rgb(204, 168, 100);">
+      
+       <input id="mioinput" type="text">
+       <button  onclick="dividi();" id="mio bottone">calcolo fattore</button>
+       <button onclick="trova();" id="mio bottone">numero con + fattori + somma</button>
+       <button  onclick="trovato();" id="mio bottone">numero con più numeri primi + prodotto</button>
+
+    <script>
+
+function dividi()
+    {
+        let in1=0;
+        in1=document.getElementById("mioinput").value;
+        document.write("il mio valore inserito è: "+in1);
+        document.write("<br>");
+        document.write("<span>"+Fattorizzatore(in1)+"</span>"+"<br>");
+        document.write("<br>");
+    
+        function Fattorizzatore(n)
+        {
+            let fattore=1;
+            let fattoriOUT="";
+            for(fattore=1;fattore<=n/2;fattore++)
+            {
+                  if(n%fattore==0)
+                  {
+                     fattoriOUT=fattoriOUT+fattore+" ";
+                  }
+            }
+            return fattoriOUT;
+        }
+    }
+   function trova(){
+     let fat=1;
+     let div=1;
+     let conta=0;
+     let conta1=0;
+     let contamax=0;
+     let a=0;
+    for (fat = 1; fat<1000; fat++)
+        {
+            for (div = 1; div<1000; div++)
+            {
+                if (fat%div==0)
+                {
+                    conta++;
+                    conta1++;
+                }
+ 
+            }  
+ 
+            if (conta >= contamax)
+                {
+                    contamax = conta;
+                    a = fat;
+                }
+                conta=0;
+        }
+ 
+       
+conta4=conta1-336;
+
+document.write("Il numero "+a+ " ha un totale di  " + contamax+"  numeri primi"  );
+document.write("<br>" + "la somma di tutti i fattori escluso il totale dei numeri primi è di: " + conta4);
+
+}
+function trovato(){
+    let fat=1;
+     let div=1;
+     let conta=0;
+     let conta1=0;
+     let contamax=0;
+     let a=0;
+    for (fat = 1; fat<2000; fat++)
+        {
+            for (div = 1; div<2000; div++)
+            {
+                if (fat%div==0)
+                {
+                    conta++;
+                    conta1++;
+                }
+ 
+            }  
+ 
+            if (conta >= contamax)
+                {
+                    contamax = conta;
+                    a = fat;
+                }
+                conta=0;
+        }
+ 
+       
+conta4=840*1680;
+
+document.write("Il numero con più numeri primi ne ha " + contamax + " ed è " + a);
+document.write("<br>" + "il prodotto tra il numero con più fattori tra 0 e 1000 e tra 1000 e 2000 e': " + conta4);
+    
+
+}
+   </script>
+   </body>
+</html>
