@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verifica</title>
     <h1> Verifica in Classe</h1>
+    <style>
+        button{
+            color: black;
+            background-color: chartreuse;
+        }
+    </style>
+    
+
+    
 </head>
 <body style="background-color: aquamarine;">
      <button> <a href="http://simonee.altervista.org/"> altervista</a></button>
@@ -13,8 +22,8 @@
      <button> <a href="https://simonecorvitto.github.io/TPSIT/bs5/page.html">bootstrap</a></button>
     <button onclick="prodotto()" >fattorizzazione</button>
     <button onclick="numprimi()" >stampa</button>
-    <button onclick="numprimo()" >numeri compresi tra</button>
-    <button onclick="prodo()" >fattorizza</button>
+    <button onclick="numprimo()" >numero primo dopo</button>
+    <button onclick="prodo()" >fattor</button>
     <script>
         function prodotto(){
 
@@ -30,7 +39,7 @@ for(fattore=1;fattore<=n/2;fattore++)
                  fattoriOUT=fattoriOUT+fattore+" "+"|";
               }
         }
-document.write(840+"ha"+fattoriOUT)
+document.write(840+" ha "+fattoriOUT)
 }
 function numprimi(){
 let n=853;
@@ -44,7 +53,7 @@ if(n%div==0)
         div++;
     }
 
-document.write("il numero primo dopo 840 e'" +n)
+document.write("il numero primo dopo 840 è " +n)
 }
 function numprimo(){
 let n=1000003;
@@ -58,7 +67,7 @@ if(n%div==0)
         div++;
     }
 
-document.write("il numero primo dopo 1000000 e'"+n+"il risultato della moltiplicazione è")
+document.write("il numero primo dopo 1000000 è: "+n+" moltiplicazione = ")
 moltiplicazione=1000003*853;
 
 document.write(moltiplicazione)
@@ -76,7 +85,7 @@ for(fattore=1;fattore<=n/2;fattore++)
                  fattoriOUT=fattoriOUT+fattore+" ";
               }
         }
-document.write(85302559+"ha"+fattoriOUT)
+document.write(85302559+" ha "+fattoriOUT)
 }
     </script>
 </body>
